@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+import './App.scss';
 import SignUpForm from './components/SignUpForm'
 import SignInForm from './components/SignInForm'
 import EventList from './components/EventList'
@@ -57,9 +57,9 @@ class App extends Component {
     return (
       <div className="App">
         <h1 className="title">Schedule Tracker</h1>
-        <div className="response-field">{this.state.feedback}</div>
         { loggedOut
           ? <div className="sign-in-page">
+              <div className="response-field">{this.state.feedback}</div>
               <SignUpForm signUpAction={this.signUp}/>
               <SignInForm signInAction={this.signIn}/>
             </div>

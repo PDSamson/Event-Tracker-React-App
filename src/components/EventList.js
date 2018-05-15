@@ -64,10 +64,11 @@ class EventList extends React.Component {
         const currentEvents = this.state.events
         const index = currentEvents.findIndex((element) => element.id === id)
         currentEvents[index] = updatedEvent.event
-        this.setState({ currentEvents,
-          feedback: 'Event Updated',
-          updatedEvent: false
-         })
+        this.setState({ currentEvents }, () => {
+          this.setState({ updatingEvent: false })
+        })
+        this.setState({ feedback: 'Event Updated' })
+
       })
       .catch(() => {
         this.setState({ feedback: 'Update failed'})
@@ -82,10 +83,11 @@ class EventList extends React.Component {
     const { updatingEvent } = this.state;
     return (
       <div className="events">
+        <div className="response-field">{this.state.feedback}</div>
         <EventForm addEventAction={this.createEventAction} />
         { updatingEvent
           ? <EventUpdateForm thisEvent={this.state.eventToUpdate} changeEventAction={this.updateEventAction} />
-          : null
+          : <div></div>
         }
         <ul className="event-list">
           {this.state.events.map(thisEvent => {

@@ -4,7 +4,6 @@ class EventUpdateForm extends Component {
   constructor(props) {
     super(props)
     const updatingEvent = this.props.thisEvent
-    console.log(updatingEvent)
     this.state = { titleValue: updatingEvent.title,
       locationValue: updatingEvent.location,
       dateValue: updatingEvent.date,
@@ -17,6 +16,7 @@ class EventUpdateForm extends Component {
   handleButtonClick = (event) => {
     event.preventDefault()
     const newData = {event:{
+      id: this.state.updatingEvent.id,
       title:this.state.titleValue,
       location:this.state.locationValue,
       date:this.state.dateValue,
