@@ -1,7 +1,7 @@
 import $ from "jquery"
 import store from './store'
-//https://event-tracker-api.herokuapp.com
-const apiOrigin = 'http://localhost:4741'
+//http://localhost:4741
+const apiOrigin = 'https://event-tracker-api.herokuapp.com'
 
 const signUpFunction = function (data) {
   return $.ajax({
