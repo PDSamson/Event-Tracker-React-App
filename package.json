@@ -1,5 +1,6 @@
 {
   "name": "eventtrackerreact",
+  "homepage": "http://PDSamson.github.io/Event-Tracker-React-App",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -14,6 +15,8 @@
     "react-scripts": "1.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start": "react-scripts start",
@@ -22,6 +25,7 @@
     "eject": "react-scripts eject"
   },
   "devDependencies": {
+    "gh-pages": "^1.1.0",
     "sass-lint": "^1.12.1"
   }
 }
