@@ -1,11 +1,3 @@
-$lightblue: #95b9c7;
-$darkblue:  #000080;
-$purple: #9f87c7;
-$white: #fff;
-$darkred: #6f0000;
-$burgundy: #ff2400;
-$darkerred: #af0000;
-
 body {
   background: #ADD8E6;
   background: -webkit-linear-gradient(#ADD8E6, #ffffff) fixed;

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './App.css';
 import SignUpForm from './components/SignUpForm'
 import SignInForm from './components/SignInForm'
 import EventList from './components/EventList'
