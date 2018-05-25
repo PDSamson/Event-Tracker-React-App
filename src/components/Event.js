@@ -15,7 +15,7 @@ const Event = ({ thisEvent, removeEventAction, sendEventAction }) => {
 
   return (
     <li className="events">
-      <div className="title">
+      <div className="event-title">
         {thisEvent.title}
       </div>
       <div className="location">
